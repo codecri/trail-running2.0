@@ -7,21 +7,39 @@
 
     <!-- Font awsome -->
     <script src="https://kit.fontawesome.com/71c8a6222d.js" crossorigin="anonymous"></script>
+    
+    
+    
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="style/main.css">
+   <link rel="stylesheet" href="style/main.css">
 
-    <!-- java script -->
+
+
+
+    <!-- biblioteka animate -->
+    <link rel="stylesheet" href="style/animate.css">
+
+   
+    
     
     <!-- less -->
     <!-- <link rel="stylesheet" href="style/main.less" type="text/less">
     <script src="js/less.min.js" type="text/javascript"></script> -->
-
+    
+    
+    <!-- java script -->
     <!-- biblioteka jquery -->
     <script src="js/jquery.js"></script>
 
     <!-- menu mobilne -->
     <script src="js/jquery.slicknav.min.js"></script>
+    <!-- countTO -->
+    <script src="js/jquery.countTo.js"></script>
+    <!-- viewport checker -->
+    <script src="js/jquery.viewportchecker.js"></script>
+
+    
 </head>
 <body>
 
@@ -33,19 +51,18 @@
 
             
     <!-- logo -->
-            <div class="logo"><a href="">logo</a></div>
+            <div class="logo animate__animated animate__zoomIn"><a href="">logo</a></div>
 
     <!-- nawigacja -->
             <div class="nav ">
                 <ul id="main-menu">
-                    <li><a href="">chi sono</a></li>
+                    <li><a href="https://facebook.com">chi sono</a></li>
                     <li><a href="">contattami</a></li>
                     <li><a href="">offerta</a></li>
-                        <ul id="main-menu-social">
-                            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-strava"></i></a></li>
-                        </ul>
+                    <li id="main-menu-social"><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li id="main-menu-social"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li id="main-menu-social"><a href=""><i class="fa-brands fa-strava"></i></a></li>
+                        
                     
                 </ul>
             </div>
@@ -58,8 +75,8 @@
     <!-- slogan glowny -->
         <div class="bottom-bar flex">
             <div class="bottom-left">
-            <h1>programmi di allenamento per la corsa personalizzati</h1>
-            <p>Running coach Zbigniew Podolak</p>
+            <h1 data-animate="animate__animated animate__fadeInLeft">programmi di allenamento per la corsa personalizzati</h1>
+            <p data-animate="animate__animated animate__fadeInLeft">Running coach Zbigniew Podolak</p>
             </div>
             <div class="bottom-right">
                 <div class="social-icons flex">
@@ -72,8 +89,8 @@
 </div>
 
     <!-- sekcja opis oferty -->
-    <div class="training">
-        <div class="training-photo-left">
+    <div class="training" >
+        <div class="training-photo-left" data-animate="animate__animated animate__zoomIn">
             <div class="photo-left">
                 <img src="image/AdobeStock_286971388.png" alt="atleta">
             </div>
@@ -102,10 +119,37 @@
         </div>
     </div>
 
+    <!-- moje resultaty -->
+    <div class="risultati" >
+        <h2>I miei risultati</h2>
+        <div class="risultati-tutti flex" data-animate="animate__animated animate__zoomIn">
+            <div class="risultato-singolo">
+                <h3><span class="timer" data-from="0" data-to="23"
+                    data-speed="1500" data-refresh-interval="1"></span></h3>
+                <p>Atleti seguiti</p>
+            </div>
+            <div class="risultato-singolo">
+                <h3><span class="timer" data-from="0" data-to="10000"
+                    data-speed="1500" data-refresh-interval="1"></span><h3>
+                <p>Distanza</p>
+            </div>
+            <div class="risultato-singolo">
+                <h3><span class="timer" data-from="0" data-to="1000000"
+                    data-speed="1500" data-refresh-interval="1"></span></h3>
+                <p>kcal bruciate</p>
+            </div>
+            <div class="risultato-singolo">
+                <h3><span class="timer" data-from="0" data-to="435"
+                    data-speed="1500" data-refresh-interval="1"></span></h3>
+                <p>Allenamenti fatti</p>
+            </div>
+        </div>
+    </div>
+
     <!-- sekcja abbonament -->
-    <div class="abonament">
+    <div class="abonament" >
     <h2>scegli l'abbonamento più adatto a te</h2>
-    <div class="subscription flex">
+    <div class="subscription flex" data-animate="animate__animated animate__zoomIn">
         
         <div class="subscription-single ">
             <div class="subscription-name-price">
@@ -154,21 +198,60 @@
         </div>
     </div>
 </div>
+
+    <!-- mowia o mnie -->
+    <div class="opinioni" >
+        <h2>Parlano di me</h2>
+        <div class="opinioni-tutti flex" data-animate="animate__animated animate__zoomIn">
+            <div class="opinioni-singoli">
+                <h4>"Trener jest zajebisty"</h4>
+                <p>Krystian</p>
+            </div>
+            <div class="opinioni-singoli">
+                <h4>"Trener jest zajebisty"</h4>
+                <p>Asia</p>
+            </div>
+            <div class="opinioni-singoli">
+                <h4>"Trener jest zajebisty"</h4>
+                <p>Klaudia</p>
+            </div>
+        </div>
+    </div>
+
     <!-- sekcja o mnie -->
-    <div class="about-me">
-        <div class="trainer-photo">
-            <img src="image/IMG_20220518_223334_732.png" alt="trainer in race">
-        </div>
-        <div class="chi-sono">
+    <div class="about-me-phone" >
             <h2>chi sono</h2>
-            <p>Sono Zbigniew Podolak, un personal trainer e un appassionato di trail running con anni di esperienza. La mia missione è quella di ispirarti, motivarti e guidarti lungo il tuo percorso di trasformazione, aiutandoti a raggiungere risultati concreti e duraturi. Se sei alla ricerca di un programma personalizzato e di un supporto dedicato, sei nel posto giusto. Con me, non avrai mai un approccio "taglia unica", ma un programma su misura che tenga conto delle tue esigenze specifiche. Ti offrirò un sostegno costante, monitorerò i tuoi progressi e apporterò eventuali modifiche al programma per garantire che rimani sulla buona strada. Non importa da dove inizi, ciò che conta è il tuo impegno e la tua determinazione a fare il cambiamento!</p>
+        <div class="trainer-photo">
+            <img data-animate="animate__animated animate__zoomIn" src="image/IMG_20220518_223334_732.png" alt="trainer in race">
         </div>
-        <div class="button-chi-sono">contattami e inizia ora</div>
+        <div class="chi-sono" data-animate="animate__animated animate__zoomIn">
+            
+            <p>Sono Zbigniew Podolak, un personal trainer e un appassionato di trail running con anni di esperienza. La mia missione è quella di ispirarti, motivarti e guidarti lungo il tuo percorso di trasformazione, aiutandoti a raggiungere risultati concreti e duraturi. Se sei alla ricerca di un programma personalizzato e di un supporto dedicato, sei nel posto giusto.  </p>
+            <p>Con me, non avrai mai un approccio "taglia unica", ma un programma su misura che tenga conto delle tue esigenze specifiche. Ti offrirò un sostegno costante, monitorerò i tuoi progressi e apporterò eventuali modifiche al programma per garantire che rimani sulla buona strada.</p>
+            <p>Non importa da dove inizi, ciò che conta è il tuo impegno e la tua determinazione a fare il cambiamento!</p>
+            <div class="button-chi-sono"><a href="">contattami e inizia ora</a></div>
+        </div>
+        
         
     </div>
+    <div class="about-me-desktop">
+        
+    <div class="trainer-photo-desktop">
+        <img data-animate="animate__animated animate__zoomIn" src="image/IMG_20220518_223334_732.png" alt="trainer in race">
+    </div>
+    <div class="chi-sono-desktop" data-animate="animate__animated animate__zoomIn">
+        <h2>chi sono</h2>
+        <p>Sono Zbigniew Podolak, un personal trainer e un appassionato di trail running con anni di esperienza. La mia missione è quella di ispirarti, motivarti e guidarti lungo il tuo percorso di trasformazione, aiutandoti a raggiungere risultati concreti e duraturi. Se sei alla ricerca di un programma personalizzato e di un supporto dedicato, sei nel posto giusto.  </p>
+        <p>Con me, non avrai mai un approccio "taglia unica", ma un programma su misura che tenga conto delle tue esigenze specifiche. Ti offrirò un sostegno costante, monitorerò i tuoi progressi e apporterò eventuali modifiche al programma per garantire che rimani sulla buona strada.</p>
+        <p>Non importa da dove inizi, ciò che conta è il tuo impegno e la tua determinazione a fare il cambiamento!</p>
+        <div class="button-chi-sono-desktop"><a href="">contattami e inizia ora</a></div>
+    </div>
+    
+    
+</div>
 </main>
     <!-- stopka -->
-    <footer>
+    <footer >
         <div class="footer-links">
             <ul>
                 <li><a href="">chi sono</a></li>
@@ -180,9 +263,9 @@
             </ul>
         </div>
         <div class="footer-social">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-strava"></i>
+            <a href=""><i class="fa-brands fa-facebook"></i></a> 
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+             <a href=""><i class="fa-brands fa-strava"></i></a>
         </div>
         <div class="copywright">&copy;All rights reserved,2023</div>
     </footer>
@@ -196,9 +279,23 @@
                 label: ''
 
             });
+            
+            //odliczanie
+            $('.timer').countTo(
+                );
+ //*viewport checker*//
+            $('*[data-animate]').addClass('hide').each(function(){
+                $(this).viewportChecker({
+                    classToAdd: 'show animate__animated animate__'+$(this).data('animate'),
+                    clasToRemove: 'hide',
+                    offset: 200
+                });
+            });
+
         });
     </script>
 
     
 </body>
 </html>
+

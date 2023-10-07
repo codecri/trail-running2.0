@@ -6,11 +6,12 @@
 
 .main
 {
-    background-image: url(/pexels-maksim-goncharenok-4422913.png);
+    background: @gradient;
     max-width: 1366px;
     height: 900px;
     margin: 0 auto;
     background-position: 65% 0;
+    background-size: cover;
 }
 
 .top-bar
@@ -21,7 +22,7 @@
     padding-top: 40px;
 }
 
-.logo
+.logo 
 {
     a
     {
@@ -293,6 +294,80 @@
     }
 }
 
+//sekcja moje resultaty
+.risultati
+{
+    background-color: @gradient;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 30px 0;
+    h2{
+        font-size:40px;
+        line-height: 50px;
+        font-family: 'Antonio', sans-serif;
+        font-weight: 700;
+        color: @grey-text;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        @media @phone
+        {
+            font-size: 64px;
+            line-height: 83px;
+        }
+    }
+
+}
+.risultati-tutti
+{
+    width: 100%;
+    flex-direction: column;
+    @media @phone
+    {
+        flex-direction: row;
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+.risultato-singolo
+{
+    width: 50%;
+    padding: 30px 30px;
+    margin: 20px auto;
+    background-color: @dark-color;
+    border-radius: 10px;
+    @media @phone
+    {
+        width: 20%;
+        margin: 0 5px;
+
+    }
+    h3
+    {
+        font-size: 40px;
+        line-height: 34px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: @green-color;
+        text-align: center;
+        padding: 20px 0;
+        height: 50%;   
+    }
+    p
+    {
+        font-size: 24px;
+        line-height: 20px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: @grey-text;
+        text-align: center;  
+    }
+}
+
+
+
 //sekcja abonament
 .abonament
 {
@@ -301,8 +376,8 @@
     background-color: @gradient;
     
     h2{
-        font-size: 64px;
-        line-height: 83px;
+        font-size:40px;
+        line-height: 50px;
         font-family: 'Antonio', sans-serif;
         font-weight: 700;
         color: @grey-text;
@@ -310,6 +385,11 @@
         width: 90%;
         text-align: center;
         margin: 0 auto;
+        @media @phone
+        {
+            font-size: 64px;
+            line-height: 83px;
+        }
     }
 }
 .subscription
@@ -407,4 +487,307 @@
             background-color: @grey-text;
         }
     }
+}
+
+//sekcja opinioni
+
+.opinioni
+{
+    max-width: 1366px;
+    background-color: @gradient;
+    margin: 0 auto;
+    h2{
+        font-size:40px;
+        line-height: 50px;
+        font-family: 'Antonio', sans-serif;
+        font-weight: 700;
+        color: @grey-text;
+        padding-top: 30px;
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        @media @phone
+        {
+            font-size: 64px;
+            line-height: 83px;
+        }
+    }
+}
+.opinioni-tutti
+{
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.opinioni-singoli
+{
+    width: 90%;
+    margin: 0 auto;
+    h4
+        {
+            font-size: 25px;
+            line-height: 34px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            color: @grey-text;
+            text-align: center;  
+            padding: 20px 0 5px 0;
+        }
+    p
+        {
+            font-size: 20px;
+            line-height: 34px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            color: @grey-text;
+            text-align: center;  
+            padding: 20px 0 5px 0;
+        } 
+}
+
+//sekcja o mnie
+.about-me-phone
+{
+@media @phone
+{
+    display:none;
+}
+
+    background-color: @gradient;
+    margin: 0 auto;
+    max-width: 1366px;
+    h2{
+        font-size:40px;
+        line-height: 50px;
+        font-family: 'Antonio', sans-serif;
+        font-weight: 700;
+        color: @green-color;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        margin: 0 auto;
+        @media @phone
+        {
+            font-size: 64px;
+            line-height: 83px;
+        }
+    }
+}
+.trainer-photo
+{
+    max-width: 90%;
+    margin: 0 auto;
+    img
+    {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}
+
+.chi-sono
+{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    p
+    {
+        font-size: 24px;
+        line-height: 34px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: @grey-text;
+        padding: 15px 0;
+        text-align: center;
+    }
+   
+}
+
+.button-chi-sono
+{
+    font-size: 20px;
+    line-height: 34px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: @gradient;
+    text-align: center;
+    background-color: @green-color;  
+    min-width: 50%;
+    max-width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &:hover
+    {
+        .basic-transition;
+        background-color: @grey-text;
+    }
+    a
+    {
+        text-decoration: none;
+        color: @gradient;
+    }
+    
+}
+
+
+
+.about-me-desktop
+{
+    max-width: 1366px;
+    margin: 0 auto;
+    background-color: @gradient;
+    display: none;
+    padding-bottom: 50px;
+    
+    @media @phone
+    {
+        display: flex;
+    }
+}
+.trainer-photo-desktop
+{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    img
+    {
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+}
+
+.chi-sono-desktop
+{
+    width: 60%;
+    h2{
+        font-size:40px;
+        line-height: 50px;
+        font-family: 'Antonio', sans-serif;
+        font-weight: 700;
+        color: @green-color;
+        padding-bottom: 30px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    p
+    {
+        font-size: 24px;
+        line-height: 34px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: @grey-text;
+        padding: 15px 0;
+        margin: 0 30px;
+        text-align: center;
+    }
+}
+
+.button-chi-sono-desktop
+{
+    font-size: 20px;
+    line-height: 34px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: @gradient;
+    text-align: center;
+    background-color: @green-color;  
+    min-width: 30%;
+    max-width: 50%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &:hover
+    {
+        .basic-transition;
+        background-color: @grey-text;
+    }
+    a
+    {
+        text-decoration: none;
+        color: @gradient;
+    } 
+}
+
+footer
+{
+    max-width: 1366px;
+    margin: 0 auto;
+    background-color: @green-color;
+    ul{
+        padding-top: 30px;
+        @media @phone
+        {
+            text-align: center;
+        }
+        li
+    {
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        @media @phone
+        {
+            display: inline;
+            text-align: center;
+            padding: 0 5px;
+            margin: 0;
+            border-left: 1px solid @gradient;
+            &:first-child
+            {
+                border-left: none;
+            }
+        }
+        a
+        {
+            text-decoration: none;
+            color: @gradient;
+            &:hover
+            {
+                .basic-transition;
+                color: @grey-text;
+            }
+        }   
+        }
+        }
+    
+}
+.footer-social
+{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    a
+    {
+        padding: 10px;
+        font-size: 20px;
+        color: @gradient;
+        &:hover
+        {
+            .basic-transition;
+            transform: scale(120%);
+        }
+    }
+}
+
+.copywright
+{
+    max-width: 1366px;
+    color: @grey-text;
+    background-color: @gradient;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Lato', sans-serif;
+    margin: 0 auto;
 }
