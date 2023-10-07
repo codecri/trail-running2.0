@@ -6,7 +6,7 @@
 
 .main
 {
-    background-image: linear-gradient(0deg, #0D0D0D, transparent 30%), url(/image/pexels-maksim-goncharenok-4422913.png);
+    background-image: url(/pexels-maksim-goncharenok-4422913.png);
     max-width: 1366px;
     height: 900px;
     margin: 0 auto;
@@ -19,6 +19,20 @@
     margin: 0 auto;
     justify-content: space-between;
     padding-top: 40px;
+}
+
+.logo
+{
+    a
+    {
+        text-decoration: none;
+        color: @grey-text;
+        .basic-transition;
+        &:hover
+        {
+            color: @green-color;
+        }
+    }
 }
 
 
@@ -36,6 +50,15 @@
     left: 0;
     right: 0;
     @media @phone{
+        display: none;
+    }
+}
+
+//social w menu mobilnym
+#main-menu-social{
+    display: inline;
+    @media @phone
+    {
         display: none;
     }
 }
@@ -267,5 +290,121 @@
                 justify-content: center;
                 padding-right: 30px;
             }
+    }
+}
+
+//sekcja abonament
+.abonament
+{
+    max-width: 1366px;
+    margin: 0 auto;
+    background-color: @gradient;
+    
+    h2{
+        font-size: 64px;
+        line-height: 83px;
+        font-family: 'Antonio', sans-serif;
+        font-weight: 700;
+        color: @grey-text;
+        padding-top: 30px;
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+.subscription
+{
+    
+    
+    background-color: @gradient;
+    padding: 50px 0;
+    flex-direction: column;
+   
+    @media @phone
+    {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+}
+.subscription-single
+{
+    flex-direction: column;
+    display: flex;
+    background-color: @dark-color;
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 10px;
+    text-align: center;
+    height: 724px;
+    @media @phone
+    {
+        flex-direction: column;
+        max-width: 30%;
+                
+    }
+    
+}
+
+.subscription-name-price
+{
+    width: 90%;
+    height: 20%;
+    margin: 0 auto;
+    h4
+    {
+        font-size: 52px;
+        line-height: 34px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: @grey-text;
+        text-align: center;  
+        padding: 40px 0 10px 0;
+    }
+    h5
+    {
+        font-size: 24px;
+        line-height: 34px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: @green-color;
+        text-align: center;  
+        
+    }
+}
+
+.subscription-offert
+{
+    width: 90%;
+    height: 65%;
+    margin: 0 auto;
+    padding-top: 30px;
+    p
+    {
+        font-size: 24px;
+        line-height: 30px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: @grey-text;
+        text-align: center; 
+        padding-bottom: 20px;
+    }
+}
+
+.subbscription-button
+{
+    width: 90%;
+    height: 15%;
+    margin: 0 auto;
+    img
+    {
+        border-radius: 50%;
+        &:hover
+        {
+            .basic-transition;
+            background-color: @grey-text;
+        }
     }
 }
