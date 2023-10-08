@@ -14,6 +14,12 @@
     <!-- Style CSS -->
    <link rel="stylesheet" href="style/main.css">
 
+   <!-- owlCarousel -->
+    <link rel="stylesheet" href="style/owl.carousel.css">
+    <link rel="stylesheet" href="style/owl.theme.css">
+
+    <!-- bxslider -->
+    <link rel="stylesheet" href="style/jquery.bxslider.css">
 
 
 
@@ -38,6 +44,10 @@
     <script src="js/jquery.countTo.js"></script>
     <!-- viewport checker -->
     <script src="js/jquery.viewportchecker.js"></script>
+    <!-- owlcarousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- bx slider -->
+    <script src="js/jquery.bxslider.min.js"></script>
 
     
 </head>
@@ -200,28 +210,34 @@
 </div>
 
     <!-- mowia o mnie -->
-    <div class="opinioni" >
+    <div class="opinioni">
         <h2>Parlano di me</h2>
         <div class="opinioni-tutti flex" data-animate="animate__animated animate__zoomIn">
-            <div class="opinioni-singoli">
-                <h4>"Trener jest zajebisty"</h4>
-                <p>Krystian</p>
-            </div>
-            <div class="opinioni-singoli">
-                <h4>"Trener jest zajebisty"</h4>
-                <p>Asia</p>
-            </div>
-            <div class="opinioni-singoli">
-                <h4>"Trener jest zajebisty"</h4>
-                <p>Klaudia</p>
-            </div>
+            <ul class="bxslieder" id="opinions-slider">
+    
+    
+                <li>
+                    <h4>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dicta, quos commodi quidem accusantium esse nisi sequi ab eaque facere."</h4>
+                    <p>Krystian</p>
+                </li>
+                <li>
+                    <h4>"Trener jest zajebisty"</h4>
+                    <p>Asia</p>
+                </li>
+                <li>
+                    <h4>"Trener jest zajebisty"</h4>
+                    <p>Klaudia</p>
+                </li>
+            </ul>
+         </div>
         </div>
-    </div>
 
     <!-- sekcja o mnie -->
     <div class="about-me-phone" >
             <h2>chi sono</h2>
-        <div class="trainer-photo">
+        <div class="trainer-photo owl-carousel" id="about-carousel" >
+            <img data-animate="animate__animated animate__zoomIn" src="image/IMG_20220518_223334_732.png" alt="trainer in race">
+            <img data-animate="animate__animated animate__zoomIn" src="image/IMG_20220518_223334_732.png" alt="trainer in race">
             <img data-animate="animate__animated animate__zoomIn" src="image/IMG_20220518_223334_732.png" alt="trainer in race">
         </div>
         <div class="chi-sono" data-animate="animate__animated animate__zoomIn">
@@ -236,7 +252,7 @@
     </div>
     <div class="about-me-desktop">
         
-    <div class="trainer-photo-desktop">
+    <div class="trainer-photo-desktop owl-carousel" id="about-carousel">
         <img data-animate="animate__animated animate__zoomIn" src="image/IMG_20220518_223334_732.png" alt="trainer in race">
     </div>
     <div class="chi-sono-desktop" data-animate="animate__animated animate__zoomIn">
@@ -291,6 +307,22 @@
                     offset: 200
                 });
             });
+            //owlcarousel
+            $('#about-carousel').owlCarousel({
+                autoPlay: 10000,
+                items: 1,
+                itemsDesktopSmall:[1366, 1],
+                itemsTablet: [768, 1],
+                
+            });
+            //slider opinie
+            $('#opinions-slider').bxSlider(
+                {
+                    mode: 'vertical',
+                    auto: true,
+                    controls: false,
+                    pager: false
+                });
 
         });
     </script>
